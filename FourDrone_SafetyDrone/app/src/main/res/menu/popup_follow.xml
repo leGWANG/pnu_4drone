@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/SmileShot"
+        android:title="SmileShot" />
+    <item
+        android:id="@+id/Timer"
+        android:title="Timer" />
+    <item
+        android:id="@+id/Detect"
+        android:title="Detect" />
+    <item
+        android:id="@+id/WideShot"
+        android:title="WideShot" />
+</menu>

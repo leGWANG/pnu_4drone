@@ -1,0 +1,22 @@
+<resources>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#C5C5C5</color>
+    <color name="accent">#009688</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="selected_tab_color">#AAAAAA</color>
+    <color name="unselected_tab_color">#CCCCCC</color>
+
+    <color name="mtrl_indigo_500">#3F51B5</color>
+    <color name="mtrl_indigo_700">#303f9f</color>
+    <color name="white_blue">#d8e3fa</color>
+    <color name="mtrl_pink_a200">#FF4081</color>
+    <color name="mtrl_pink_a400">#f50057</color>
+
+    <color name="mtrl_blue_500">#2196f3</color>
+    <color name="mtrl_blue_700">#1976d2</color>
+</resources>

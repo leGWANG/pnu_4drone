@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JoystickView">
+        <attr name="drawableForward" format="integer" />
+        <attr name="drawableBackward" format="integer" />
+        <attr name="drawableLeft" format="integer" />
+        <attr name="drawableRight" format="integer" />
+    </declare-styleable>
+</resources>

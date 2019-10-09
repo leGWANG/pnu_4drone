@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FourDrone_SafetyDrone.iml" filepath="$PROJECT_DIR$/FourDrone_SafetyDrone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SelfiDrone.iml" filepath="$PROJECT_DIR$/SelfiDrone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary320/openCVLibrary320.iml" filepath="$PROJECT_DIR$/openCVLibrary320/openCVLibrary320.iml" />
+    </modules>
+  </component>
+</project>

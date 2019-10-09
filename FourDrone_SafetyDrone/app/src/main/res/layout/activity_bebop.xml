@@ -1,0 +1,257 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fourdrone.safetydrone.activity.BebopActivity"
+    android:id="@+id/piloting_view">
+
+    <com.fourdrone.safetydrone.view.BebopVideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.fourdrone.safetydrone.view.ObjectDetect
+        android:id="@+id/faceDetect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    // drone gps
+    <TextView
+        android:id="@+id/gps_drone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:text="D : 12.12345, 123.123456"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    // phone gps
+    <TextView
+        android:id="@+id/gps_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:text="P : 12.12345, 123.123456"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/droneyaw_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:text="드론 각도 : 60도"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    // battery
+    <TextView
+        android:id="@+id/battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:text="배터리:XX%"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    // distance
+    <TextView
+        android:id="@+id/dist_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="거리:XXM"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="5sp"
+        android:scaleType="fitXY"
+        android:foregroundGravity="center"
+        android:background="@android:color/transparent"
+        android:src="@drawable/menu_icon"
+        android:id="@+id/additionalMenu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ToggleButton
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:layout_marginRight="5sp"
+        android:layout_marginBottom="5sp"
+        android:background="@drawable/start_off"
+        android:textOff=" "
+        android:textOn=" "
+        android:id="@+id/followBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/additionalMenuItems"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/additionalMenu"
+        android:layout_toEndOf="@+id/additionalMenu"
+        android:layout_marginBottom="5sp">
+        <ToggleButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/service_off"
+            android:id="@+id/Detect"
+            android:textOff=" "
+            android:textOn=" "/>
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/followBtn"
+        android:layout_alignRight="@+id/followBtn"
+        android:layout_alignBottom="@+id/btn_back"
+        android:layout_marginBottom="-109dp" />
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:id="@+id/btn_takeoff_land"
+        android:src="@drawable/take_off"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/take_off"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:id="@+id/warning_view"
+        android:background="@drawable/warning"
+        android:gravity="center"
+        android:text="위험 상황 탐지\n10초후 문자발송\n\n오탐지일시\n눌러서 취소"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/take_off"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:id="@+id/people_warning"
+        android:background="@drawable/warning_yellow"
+        android:gravity="center"
+        android:text="근처에 사람이\n접근 중 입니다\n\n신고하려면\n누르세요"
+        android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="130dp"
+        android:contentDescription="@string/take_off"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/btn_yaw_right"
+        style="@style/AppTheme.ControlButton"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="24dp"
+        android:contentDescription="@string/movement_right"
+        app:srcCompat="@drawable/ic_turn_right_24dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_roll_left"
+        style="@style/AppTheme.ControlButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:contentDescription="@string/movement_left"
+        app:srcCompat="@drawable/ic_move_left_24dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_yaw_left"
+        style="@style/AppTheme.ControlButton"
+        android:layout_below="@+id/btn_gaz_up"
+        android:layout_toLeftOf="@+id/btn_gaz_up"
+        android:layout_toStartOf="@+id/btn_gaz_up"
+        android:contentDescription="@string/yaw_left"
+        app:srcCompat="@drawable/ic_turn_left_24dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_roll_right"
+        style="@style/AppTheme.ControlButton"
+        android:layout_above="@+id/btn_back"
+        android:layout_toEndOf="@+id/btn_back"
+        android:layout_toRightOf="@+id/btn_back"
+        android:contentDescription="@string/movement_right"
+        app:srcCompat="@drawable/ic_move_right_24dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_gaz_up"
+        style="@style/AppTheme.ControlButton"
+        android:layout_above="@+id/btn_yaw_right"
+        android:layout_toLeftOf="@+id/btn_yaw_right"
+        android:layout_toStartOf="@+id/btn_yaw_right"
+        android:contentDescription="@string/movement_up"
+        app:srcCompat="@drawable/ic_gaz_up_24dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_gaz_down"
+        style="@style/AppTheme.ControlButton"
+        android:layout_below="@+id/btn_yaw_right"
+        android:layout_toEndOf="@+id/btn_yaw_left"
+        android:layout_toRightOf="@+id/btn_yaw_left"
+        android:contentDescription="@string/movement_down"
+        app:srcCompat="@drawable/ic_gaz_down_24dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_forward"
+        style="@style/AppTheme.ControlButton"
+        android:layout_alignTop="@+id/btn_gaz_up"
+        android:layout_toEndOf="@+id/btn_roll_left"
+        android:layout_toRightOf="@+id/btn_roll_left"
+        android:contentDescription="@string/movement_forward"
+        app:srcCompat="@drawable/ic_move_forward_24dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/AppTheme.ControlButton"
+        android:layout_below="@+id/btn_roll_left"
+        android:layout_toEndOf="@+id/btn_roll_left"
+        android:layout_toRightOf="@+id/btn_roll_left"
+        android:contentDescription="@string/movement_back"
+        app:srcCompat="@drawable/ic_move_back_24dp"/>
+</RelativeLayout>
